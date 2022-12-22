@@ -2,17 +2,13 @@
   <h2>Карусель)))</h2>
   <div class="carusel_container">
     <div class="v-carusel" :style="{'margin-left': '-' + (100*currentIndex) + '%'}">
-      <div>
-      <img :src = "require('../assets/' + slideList[slideList.length-1].img)" class="fantom_slide"/>
-    </div>
+      
     <vCaruselItem  :class="item_slide"
     v-for="item in slideList" 
   :key="item.id"
   :item_data="item"
   />
-<div>
-  <img :src = "require('../assets/' + slideList[0].img)" class="fantom_slide"/>
-</div>
+
 </div>
 
   </div>
@@ -37,20 +33,14 @@ vCaruselItem
   data ()  {
         return{
 currentIndex: 0,
-distance: -500,
         }
     },
   computed: {
   slideList() {
     return this.$store.getters.CARUSEL_LIST;
   },
-  containerStyle() {// Здесь используются вычисляемые атрибуты, а преобразование используется для перемещения всего списка изображений
-      return {
-        transform:`translate3d(${this.distance}px, 0, 0)`
-      }
-    }
-
 },
+
 methods : {
   prevSlide () {
     if (this.currentIndex>0) {
@@ -61,7 +51,7 @@ methods : {
     
 },
 nextSlide () {
-    if (this.currentIndex >= this.slideList.length+1) {
+    if (this.currentIndex >= this.slideList.length-1) {
         this.currentIndex=0
     } else {
         this.currentIndex++
@@ -93,11 +83,7 @@ mounted () {
   overflow: hidden;
 
 }
-.fantom_slide {
-width: 80vw;
-    height: 200px;
-    object-fit: cover;
-  }
+
 button {
     color:black;
   }
