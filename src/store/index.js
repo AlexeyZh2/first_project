@@ -5,30 +5,34 @@ export default createStore({
     carusel_list: [
       {
         id: 1,
-     img: "image1.jpeg"
+        img: require("../assets/image1.jpeg"),
+        name: "Фото 1"
       },
       {
         id: 2,
-        img: "image2.jpg"
+        img: require("../assets/image2.jpg"),
+        name: "Фото 2"
 
       },
       {
         id: 3,
-        img: "image3.jpg"
+        img: require("../assets/image3.jpg"),
+        name: "Фото 3"
 
       },
       {
-        id:4,
-        img: "image4.jpg"
+        id: 4,
+        img: require("../assets/image4.jpg"),
+        name: "Фото 4"
 
       },
 
     ]
   },
-    getters: {  
-      CARUSEL_LIST (state){ 
-        return state.carusel_list;
-      },
+  getters: {
+    CARUSEL_LIST(state) {
+      return state.carusel_list;
+    },
   },
   mutations: {
   },

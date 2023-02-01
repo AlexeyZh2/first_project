@@ -1,6 +1,6 @@
 <template>
     <div class="carusel_image">
-    <img :src="require('../assets/' + item_data.img)" v-bind:alt="Фото"/>
+    <img :src="require('../assets/' + item_data.img)" v-bind:alt="item_data.name"/>
     
 </div>
   </template>
