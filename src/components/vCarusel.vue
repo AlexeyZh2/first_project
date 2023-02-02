@@ -74,13 +74,13 @@ export default {
       let step = +event.target.id - 1 - this.currentSlide
       if (step > 0) {
         while (step > 0) {
-          this.nextSlide();
+          setTimeout(this.nextSlide, 500)
           step--
         }
       } else {
 
         while (step < 0) {
-         this.prevSlide();
+          setTimeout(this.prevSlide, 500)
           step++
         }
       }
