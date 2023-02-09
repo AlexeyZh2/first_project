@@ -1,13 +1,9 @@
 <template>
     <h2>Контакты</h2>
-    <vCarusel/>
 </template>
 <script>
-import vCarusel from "../components/vCarusel.vue"
 export default {
-    components: {
-        vCarusel,
-    },
+    
     data: function () {
     return {  
     }

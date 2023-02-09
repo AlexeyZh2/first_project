@@ -1,6 +1,7 @@
 <template>
     <div class="contests">
         <img src="../assets/image4.jpg">
+        <div class="main_container">
     <h2>Конкурсы</h2>
     <p>Концепция градостроительного развития территории предполагает создание высококачественной 
     архитектурной среды с использованием  традиций Петербургской застройки, максимальным вовлечением акваторий в городскую ткань.</p>
@@ -48,6 +49,7 @@
 
 </ul>
 </div>
+</div>
 </template>
 <script>
 export default {
@@ -56,17 +58,14 @@ export default {
 </script>
 <style scoped>
 .contests {
-    width: 90%;
+    width: 80vw;
     margin: 0 auto;
     padding: 0 auto;
 }
 img {
     object-fit: cover;
-    width: 90%;
+    width: 80vw;
     height: 20vh;
 }
-p {
-    width: 90%;
-    margin: 0 auto;
-}
+
 </style>

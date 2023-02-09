@@ -1,21 +1,19 @@
 <template>
-  <h2>Карусель)))</h2>
   <div class="slider_container">
-  <div class="slider">
-        <img v-for="item in carusel_list_start" :key="item.id"
-:src="item.img" class="slider_item" :style="item.style" v-on:click="stopSlideShow"/>
+    <div class="slider">
+      <img v-for="item in carusel_list_start" :key="item.id" :src="item.img" class="slider_item" :style="item.style"
+        v-on:click="stopSlideShow" />
 
     </div>
     <div>
-      <span class="dot" v-bind:class="{ active: currentSlide == item.id - 1 }" 
-      v-for="item in slideList" :key="item.id" :id="item.id"
-      v-on:click="userChoiseSlide"></span>
+      <span class="dot" v-bind:class="{ active: currentSlide == item.id - 1 }" v-for="item in slideList" :key="item.id"
+        :id="item.id" v-on:click="userChoiseSlide"></span>
     </div>
     <button v-on:click="prevSlide" class="left_button"></button>
     <button v-on:click="nextSlide" class="right_button"></button>
-    </div>
-    <button v-if ="!slideShow" v-on:click="slidesShow">Начать показ слайдов</button>
-    <button v-else v-on:click="stopSlideShow">Остановить показ слайдов</button>
+  </div>
+  <button class="start_button" v-if="!slideShow" v-on:click="slidesShow">Начать показ слайдов</button>
+  <button class="start_button" v-else v-on:click="stopSlideShow">Остановить показ слайдов</button>
 </template>
 
 <script>
@@ -151,6 +149,11 @@ button {
   cursor: pointer;
 }
 
+.start_button {
+  border-radius: 15px;
+  height: 30px;
+}
+
 .slider {
   width: 80vw;
   height: 200px;
@@ -161,6 +164,8 @@ button {
 
 .slider_container {
   position: relative;
+  width: 80vw;
+  margin: 0 auto;
 }
 
 .left_button {
@@ -172,7 +177,7 @@ button {
   background-repeat: no-repeat;
   position: absolute;
   top: 80px;
-  left: 70px;
+  left: 3px;
   border: none;
 }
 
@@ -185,7 +190,7 @@ button {
   background-repeat: no-repeat;
   position: absolute;
   top: 80px;
-  right: 70px;
+  right: 3px;
   border: none;
 }
 
