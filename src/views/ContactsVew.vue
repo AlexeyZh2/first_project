@@ -1,5 +1,7 @@
 <template>
     <h2>Контакты</h2>
+    <p>Адрес:</p>
+    <p>Васиьевский остров 16</p>
 </template>
 <script>
 export default {
