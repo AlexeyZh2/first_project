@@ -1,4 +1,9 @@
 <template>
+  <header>
+    <div class="header_logo"></div>
+    <p class="header_text">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "АГ Портал" 
+      ОГРН 1197847066867, ИНН 7810753446, КПП 784301001</p>
+  </header>
   <div class="wrapper">
   <button v-if = "!menuOpen" class = "menu_button" 
   v-on:click="showMenu"
@@ -8,9 +13,12 @@
   ></button>
   <nav class="main_nav">
     <router-link class="main_link" to="/">Главная страница</router-link>
-    <router-link class="main_link" to="/about">О компании</router-link>
-    <router-link class="main_link" to="/aboutproject">О проектах</router-link>
-    <router-link class="main_link" to="/contests">Конкурсы</router-link>
+    <router-link class="main_link" to="/about_us">О нашей команде</router-link>
+    <router-link class="main_link" to="/consept">Концепция</router-link>
+    <router-link class="main_link" to="/project" v-bind:class="{ 'main-link-active': this.$route.name=='project1' ||  this.$route.name=='project2'}">Проект</router-link>
+    <router-link class="main_link" to="/economic_efficiency">Зкономическая эффективность проекта</router-link>
+    <router-link class="main_link" to="/consulting"  v-bind:class="{ 'main-link-active': this.$route.name=='consulting1' }">Консалтинг</router-link>
+    <router-link class="main_link" to="/implementation">Реализация</router-link>
     <router-link class="main_link" to="/contacts">Контакты</router-link>
   </nav>
 </div>
@@ -48,27 +56,28 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
 }
 .wrapper {
   position: relative;
-  height: 50px;
-  width: 80vw;
-  margin: 30px auto;
+  width: 100vw;
+  box-sizing: border-box;
+  
 }
 
 .main_link {
   padding: 8px 2px;
-  color: #2c3e50;
+  color: white;
   text-decoration: none;
   margin-right: 10px;
   
 }
+
 nav {
-  margin-bottom: 50px;
   display: flex;
   justify-content: space-between;
+  background-color: rgb(0, 150, 136);
+  color: white;
 }
 .activ_menu {
   left:0
@@ -78,6 +87,28 @@ nav {
   color: #2c3e50;
   text-decoration: none;
 }
+header {
+  background-color: rgb(0, 77, 64);
+  padding: 20px 50px 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  box-sizing: border-box;
+  
+
+} 
+.header_logo {
+  
+  background-image: url(../src/assets/main_logo.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  margin-left: 0px;
+  margin-right: auto;
+  
+}
 
 nav a {
   font-weight: bold;
@@ -85,6 +116,10 @@ nav a {
 }
 
 nav a.router-link-exact-active {
+  color: black;
+  border-bottom: 3px solid  black;
+}
+.main-link-active {
   color: black;
   border-bottom: 3px solid  black;
 }
@@ -107,6 +142,16 @@ nav a.router-link-exact-active {
   background-position: center;
   background-size: 100%;
   border: 0;
+}
+.header_text {
+  color: white;
+  display: inline-block;
+  width: 500px;
+  margin-right: 0px;
+  margin-left: auto;
+  text-indent: 0ch;
+  font-size: 12px;
+  width: 40%;
 }
 @media screen and (max-width: 696px){
   .menu_button {
