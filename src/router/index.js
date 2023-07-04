@@ -7,9 +7,14 @@ import ImplementationVew from '../views/ImplementationVew.vue'
 import ProjectVew from '../views/ProjectVew.vue'
 import Project1Vew from '../views/Project1Vew.vue'
 import Project2Vew from '../views/Project2Vew.vue'
+import Project3Vew from '../views/Project3Vew.vue'
 import ConsultingVew from '../views/ConsultingVew.vue'
 import Consulting1Vew from '../views/Consulting1Vew.vue'
 import EconomicVew  from '../views/EconomicVew.vue'
+import ConseptAGTP from '../views/ConseptAGPTVew.vue'
+import ConseptAGO from '../views/ConseptAGOVew.vue'
+import Consept1 from '../views/Consept1Vew.vue'
+import Consept2 from '../views/Consept2Vew.vue'
 
 const routes = [
   {
@@ -57,6 +62,11 @@ const routes = [
     name: 'project2',
     component: Project2Vew
   },
+  {
+    path: '/project3',
+    name: 'project3',
+    component: Project3Vew
+  },
 
   {
     path: '/contacts',
@@ -67,6 +77,26 @@ const routes = [
     path: '/consept',
     name: 'consept',
     component: ConseptView
+  },
+  {
+    path: '/conseptAGTP',
+    name: 'conseptAGTP',
+    component: ConseptAGTP
+  },
+  {
+    path: '/conseptAGO',
+    name: 'conseptAGO',
+    component: ConseptAGO
+  },
+  {
+    path: '/consept1',
+    name: 'consept1',
+    component: Consept1
+  },
+  {
+    path: '/consept2',
+    name: 'consept2',
+    component: Consept2
   },
 ]
 

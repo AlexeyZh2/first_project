@@ -27,7 +27,7 @@
                 выполнение всеми участниками проекта принятых обязательств. </p>
         </div>
         <div class="links_container">
-            <h2>Реализация</h2>
+            <h3>Реализация</h3>
             <p>Управление проектом</p>
             <p>Функция технического заказчика</p>
         </div>
@@ -40,22 +40,34 @@
     background-image: url(../assets/implementation_background.jpg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    width: 100vw;
+    width: 100%;
     position: relative;
     padding: 30px;
     box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    min-height: 90vh;
 }
 .main_container {
-    width: 55vw;
+    padding-top: 30px;
+    width: 40vw;
     padding-left: 20px;
     box-shadow: -10px 10px 10px;
+    margin-left: 30px;
 }
 p {
     font-size: 11px;
+    text-align: justify;
+    text-indent: 20px;
+}
+h3 {
+    font-size: 12px;
+    margin-left: 20px;
+}
+h2 {
+    font-size: 12px;
 }
 .links_container {
-    position: absolute;
-    top: 60px;
-    right: 180px;
+    width: 40%;
 }
 </style>

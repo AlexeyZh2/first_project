@@ -3,44 +3,42 @@
     <div class="container1">
       <div class="about_item">
         <h4>КОНЦЕПЦИЯ</h4>
-        <p>Концепция градостроительного развития территории.</p>
-        <p>Формирование идеи градостроительного освоения территории.</p>
-        <p>Разработка документации градостроительной концепции.</p>
-        <p>Подготовка документации АГПТ.</p>
-        <p>Подготовка документации АГО.</p>
-        <p>Инициативные концептуальные предложения.</p>
+        <router-link class="link" to="/consept1">Концепция градостроительного развития территории.</router-link>
+        <router-link class="link" to="/consept1">Формирование идеи градостроительного освоения территории.</router-link>
+        <router-link class="link" to="/consept2">Разработка документации градостроительной концепции.</router-link>
+        <router-link class="link" to="/conseptAGTP">Подготовка документации АГПТ.</router-link>
+        <router-link class="link" to="/conseptAGO">Подготовка документации АГО.</router-link>
+        <router-link class="link" to="/consept">Инициативные концептуальные предложения.</router-link>
       </div>
       <div class="about_item">
         <h4>ПРОЕКТ</h4>
-        <p>Проекты планировки и проекты межевания территории.</p>
-        <p>Технико-экономическое обоснование (ТЭО) проекта.</p>
-        <p>Проектирование объектов строительства.</p>
+        <router-link class="link" to="/project1">Проекты планировки и проекты межевания территории.</router-link>
+        <router-link class="link" to="/project2">Технико-экономическое обоснование (ТЭО) проекта.</router-link>
+        <router-link class="link" to="/project2">Проектирование объектов строительства.</router-link>
       </div>
     </div>
     <div class="container2">
       <div class="about_item">
         <h4>ЭКОНОМИЧЕСКАЯ ЭФФЕКТИВНОСТЬ ПРОЕКТА</h4>
-        <p>Алгоритм расчета экономической эффективности проекта.</p>
-        <p>Анализ рынка недвижимости.</p>
-        <p>Расчет капитальных затрат.</p>
-        <p>Обоснование финансового дохода.</p>
-        <p>Разработка финансовой модели проекта.</p>
+        <router-link class="link" to="/economic_efficiency">Алгоритм расчета экономической эффективности проекта.</router-link>
+        <router-link class="link" to="/economic_efficiency">Анализ рынка недвижимости.</router-link>
+        <router-link class="link" to="/economic_efficiency">Расчет капитальных затрат.</router-link>
+        <router-link class="link" to="/economic_efficiency">Обоснование финансового дохода.</router-link>
+        <router-link class="link" to="/economic_efficiency">Разработка финансовой модели проекта.</router-link>
       </div>
       <div class="about_item">
         <h4>КОНСАЛТИНГ</h4>
-        <p>Анализ территории.</p>
-        <p>Анализ градостроительного потенциала земельных участков.</p>
-        <p>Анализ эскизов и предложений заказчика.</p>
-        <p>Разработка «Дорожной карты» проекта.</p>
-        <p>Подготовка документации на получение УРВИ и отклонений.</p>
+        <router-link class="link" to="/consulting">Анализ территории.</router-link>
+        <router-link class="link" to="/consulting">Анализ градостроительного потенциала земельных участков.</router-link>
+        <router-link class="link" to="/consulting">Анализ эскизов и предложений заказчика.</router-link>
+        <router-link class="link" to="/consulting1">Разработка «Дорожной карты» проекта.</router-link>
+        <router-link class="link" to="/consulting1">Подготовка документации на получение УРВИ и отклонений.</router-link>
       </div>
       <div class="about_item">
         <h4>РЕАЛИЗАЦИЯ</h4>
-        <p>Управление проектом.</p>
-        <p>Функции технического заказчика.</p>
-        <p>Экспертиза проектов (сопровождение проекта до заключения экспертизы).</p>
-        <p>Разрешение на строительство (сопровождение проекта до получения РНС).</p>
-        <p>Авторский надзор.</p>
+        <router-link class="link" to="/implementation">Управление проектом.</router-link>
+        <router-link class="link" to="/implementation">Функции технического заказчика.</router-link>
+        
       </div>
     </div>
 
@@ -71,13 +69,14 @@ export default {
 <style scoped>
 .main_container {
   background-image: url(../assets/title_page_background.jpg);
-  background-size: 100% 100%;
+  background-size: cover;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   box-sizing: border-box;
-  width: 100vw;
-  padding: 50px;
+  width: 100%;
+  padding: 30px 50px 50px 50px;
   height: 100vh;
+  background-position: top;
 }
 
 p {
@@ -89,8 +88,8 @@ p {
 
 h4 {
   color: white;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
   font-size: 10px;
 }
 .about_item {
@@ -101,5 +100,25 @@ h4 {
 }
 .container2 {
   width: 50%;
+}
+.link {
+  text-decoration: none;
+  color: white;
+  font-size: 10px;
+  display: block;
+}
+@media  screen and (max-width: 480px) {
+  .main_container {
+    flex-direction: column;
+    height: auto;
+    background-size: cover;
+    background-position: left;
+  }
+  .container1{
+  width: 90%;
+}
+.container2 {
+  width: 90%;
+}
 }
 </style>

@@ -2,9 +2,11 @@
     <div class="project1">
         <div class="container">
             <h2> ПРОЕКТ</h2>
-            <p> Проекты планировки и проекты межевания территории</p>
-            <p>Технико-экономическое обоснование (ТЭО) проекта</p>
-            <p>Проектирование объектов капитального строительства</p>
+            <p class="active_link"> Проекты планировки и проекты межевания территории</p>
+            <router-link to="project2" class="link">
+            <p class="link">Технико-экономическое обоснование (ТЭО) проекта</p>
+            <p class="link">Проектирование объектов капитального строительства</p>
+        </router-link>
         </div>
         <div class="container1">
             <h2>ПРОЕКТЫ ПЛАНИРОВКИ И ПРОЕКТЫ МЕЖЕВАНИЯ ТЕРРИТОРИИ</h2>
@@ -30,21 +32,54 @@
                 градостроительная основа последующих проектных решений генерального плана
                 территории, объектного проектирования, расчета эффективной экономической
                 модели инвестиционного проекта строительства, реновации, развития территории.</p>
-            
+                  
         </div>
+        <p  class="footer_link" v-on:click="openPPT">ПРОЕКТЫ ПЛАНИРОВКИ ТЕРРИТОРИИ</p> 
+        <imagePopup :slides=slidesShow />
     </div>
+     
 </template>
 <script>
+import imagePopup from "../components/popup.vue"
+export default {
+    components: {
+        imagePopup,
+    },
+    data: function () {
+        return {
+            ppt: [
+                {
+                    img: require("../assets/ppt/ppt1.jpg"),   
+                },
+                {
+                    img: require("../assets/ppt/ppt2.jpg"), 
+                },
+            ],
+            slidesShow: [],   
+        }
+    },
+    methods: {
+        openPPT () {
+            this.slidesShow=this.ppt
+            this.$store.commit('SET_IMAGE_POPUP')
+            this.$store.commit('SET_SLIDE_URL', this.slidesShow[0].img)
+        }
+
+    }
+}
 </script>
 <style scoped>
 .project1 {
     background-image: url(../assets/project1_background.jpg);
     background-size: 100% 100%;
+    background-repeat: no-repeat;
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: space-around;
     padding: 30px;
+    box-sizing: border-box;
+    position: relative;
 
 }
 
@@ -59,7 +94,27 @@ p {
     margin-top: 0;
     margin-bottom: 0;
 }
+p:last-child {
+    margin-bottom: 50px;
+}
 .container1 {
     width: 60%;
+}
+.active_link {
+    font-size: 13px;
+    font-weight: bold;
+}
+.link{
+    font-size: 11px;
+    text-decoration: none;
+}
+.footer_link {
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    bottom: 60px;
+    right: 280px;
+    text-decoration: underline;
+    cursor: pointer;
 }
 </style>

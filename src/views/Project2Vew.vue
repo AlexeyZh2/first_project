@@ -2,9 +2,9 @@
     <div class="project1">
         <div  class="links_container">
         <h2> ПРОЕКТ</h2>
-        <p> Проекты планировки и проекты межевания территории</p>
-        <p>Технико-экономическое обоснование (ТЭО) проекта</p>
-        <p>Проектирование объектов капитального строительства</p>
+        <router-link to="project1" class="link"> Проекты планировки и проекты межевания территории</router-link>
+        <p class="active_link">Технико-экономическое обоснование (ТЭО) проекта</p>
+        <p class="active_link">Проектирование объектов капитального строительства</p>
     </div>
     <div class="main_container">
     <div class="container">
@@ -72,6 +72,7 @@
         background-size: 100% 100%; 
         width: 100vw;
         padding: 30px;
+        box-sizing: border-box;
     
     }
     h2, p, li {
@@ -92,7 +93,7 @@ width: 45%;
 padding: 20px;
     }
     .links_container {
-        width: 30%;
+        width: 45%;
         margin-left: auto;
     }
     .another_size {
@@ -103,5 +104,16 @@ padding: 20px;
     }
     .another_size2 {
         width: 50%;
+    }
+    .active_link {
+        font-size: 14px;
+        font-weight: 900;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .link {
+        text-decoration: none;
+        color: rgb(66, 66, 66);
+        font-size: 12px;
     }
     </style>

@@ -30,17 +30,17 @@
         </div>
 
         <div class="container1">
-            <h2>Консалтинг</h2>
+            <h2>КОНСАЛТИНГ</h2>
             <router-link class='link' to="/consulting">
-                <div>
-                    <p>Анализ территории</p>
-                    <p>Анализ градостроительного потенциала земельных участков</p>
-                    <p>Анализ эскизов и предложений заказчика</p>
-                </div>
+                
+                    <p class='link'>Анализ территории</p>
+                    <p class='link'>Анализ градостроительного потенциала земельных участков</p>
+                    <p class='link'>Анализ эскизов и предложений заказчика</p>
+                
             </router-link>
 
-            <p>Разработка "Дорожной карты проекта"</p>
-            <p>Подготовка документации на получение УРВИ и отклонений</p>
+            <p class='link-active'>Разработка "Дорожной карты проекта"</p>
+            <p class='link-active'>Подготовка документации на получение УРВИ и отклонений</p>
         </div>
     </div>
 </template>
@@ -50,7 +50,10 @@
 .consulting1 {
     background-image: url(../assets/consulting1_background.jpg);
     background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
     width: 100vw;
+    min-height: 80vh;
     display: flex;
 
 }
@@ -64,11 +67,23 @@
 h2,
 p {
     font-size: 12px;
+    text-align: justify;
 }
 .link {
     font-size: 12px;
     text-decoration: none;
-    color: black;
+    color: rgb(55, 71, 79);
     display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.link-active {
+    font-size: 12px;
+    font-weight: 900;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.container1 {
+    padding-top: 40px;
 }
 </style>

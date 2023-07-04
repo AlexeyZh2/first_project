@@ -2,9 +2,9 @@
     <div class="consulting">
         <div class="container">
         <h2>Консалтинг</h2>
-        <p>Анализ территории</p>
-        <p>Анализ градостроительного потенциала земельных участков</p>
-        <p>Анализ эскизов и предложений заказчика</p>
+        <p class='link-active'>Анализ территории</p>
+        <p class='link-active'>Анализ градостроительного потенциала земельных участков</p>
+        <p class='link-active'>Анализ эскизов и предложений заказчика</p>
         <router-link class='link' to="/consulting1">Разработка "Дорожной карты проекта"</router-link>
         <router-link class='link' to="/consulting1">Подготовка документации на получение УРВИ и отклонений</router-link>
     </div>
@@ -71,7 +71,7 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
     box-sizing: border-box;
-    width: 100vw;
+    width: 100%;
     margin-top: 0;
     display: flex;
     justify-content: space-between;
@@ -85,12 +85,17 @@ p, ul {
     font-size: 12px;
 }
 .link {
-    font-size: 12px;
+    font-size: 11px;
     text-decoration: none;
     color: black;
     display: block;
 }
-
+.link-active {
+    font-size: 12px;
+    font-weight: 900;
+    margin-top: 0;
+    margin-bottom: 0;
+}
 .container2 {
     width: 55%;
     box-shadow: -10px 10px 10px;

@@ -2,39 +2,76 @@ import { createStore } from 'vuex'
 
 export default createStore({
   state: {
-    carusel_list: [
+    sestrorezk_center: [
       {
-        id: 1,
-        img: require("../assets/image1.jpeg"),
-        name: "Фото 1"
+        img: require("../assets/Sestrorezk_center/sestrorezk_center1.jpg"),
       },
       {
-        id: 2,
-        img: require("../assets/image2.jpg"),
-        name: "Фото 2"
-
+        img: require("../assets/Sestrorezk_center/sestrorezk_center2.jpg"),
       },
       {
-        id: 3,
-        img: require("../assets/image3.jpg"),
-        name: "Фото 3"
-
+        img: require("../assets/Sestrorezk_center/sestrorezk_center3.jpg"),
       },
       {
-        id: 4,
-        img: require("../assets/image4.jpg"),
-        name: "Фото 4"
-
+        img: require("../assets/Sestrorezk_center/sestrorezk_center4.jpg"),
+      },
+      {
+        img: require("../assets/Sestrorezk_center/sestrorezk_center5.jpg"),
       },
 
-    ]
+    ],
+    sestrorezk_zavod: [
+      {
+        img: require("../assets/sestrorezk_zavod/sestrorezk_zavod1.jpg"),
+      },
+      {
+        img: require("../assets/sestrorezk_zavod/sestrorezk_zavod2.jpg"),
+      },
+    ],
+    gorskaya: [
+      {
+        img: require("../assets/gorskaya/gorskaya1.jpg"),
+      },
+      {
+        img: require("../assets/gorskaya/gorskaya2.jpg"),
+      },
+    ],
+    spbgu: [
+      {
+        img: require("../assets/spgu/SPBGU_on_VO.jpg"),
+      },
+    ],
+    openPopup: false,
+    openBigImage: false,
+    slideurl: ""
   },
   getters: {
-    CARUSEL_LIST(state) {
-      return state.carusel_list;
-    },
+    CARUSEL_LIST: (state) => { return state.carusel_list },
+    OPEN_POPUP: (state) => { return state.openPopup },
+    SLIDE_URL: (state) => { return state.slideurl },
+    SESTROR_CENTER: (state) => {return state.sestrorezk_center},
+    SESTROR_ZAVOD: (state) => {return state.sestrorezk_zavod},
+    GORSKAYA: (state) => {return state.gorskaya},
+    SPBGU: (state) => {return state.spbgu},
+    OPEN_BIG_IMAGE: (state) =>{return state.openBigImage}
+
   },
   mutations: {
+    SET_IMAGE_POPUP: (state) => {
+      state.openPopup = true;
+    },
+    SET_CLOSE_IMAGE_POPUP: (state) => {
+      state.openPopup = false;
+    },
+    SET_SLIDE_URL: (state, payload) => {
+      state.slideurl = payload
+    },
+    SET_BIG_IMAGE_OPEN: (state) => {
+      state.openBigImage=true
+    },
+    SET_BIG_IMAGE_CLOSE: (state) => {
+      state.openBigImage=false
+    }
   },
   actions: {
   },

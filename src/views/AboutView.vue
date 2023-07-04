@@ -50,14 +50,16 @@ p {
 .about {
   margin: 0 auto;
   background-image: url(../assets/title_page_background1.jpg);
-  background-size: 100% 100%;
-  width: 100vw;
+  background-size: cover;
+  width: 100%;
   padding: 30px;
   box-sizing: border-box;
+  background-position: left;
 }
 
 h1 {
   margin-top: 0px;
+  margin-bottom: 10px;
   font-size: 12px;
   color: white;
 }
@@ -74,5 +76,36 @@ h1 {
 
 .container2 {
   width: 40%;
-  margin-top: 300px;
-}</style>
+  margin-top: auto;
+}
+@media screen and (max-width: 900px){
+  .main_container {
+  width: 80vw;
+}
+}
+@media screen and (max-width: 690px){
+  .main_container {
+  width: 90vw;
+}
+}
+@media screen and (max-width: 550px){
+  .main_container {
+  flex-direction: column;
+  width: 100%;
+  
+}
+.container1 {
+  width: 80%;
+  text-align: justify;
+  font-size: 10px;
+  margin: 0 auto;
+}
+
+.container2 {
+  width: 80%;
+  text-align: justify;
+  font-size: 10px;
+  margin: 0 auto;
+}
+}
+</style>
