@@ -1,7 +1,10 @@
 <template>
-    <h2>Контакты</h2>
-    <p>Адрес:</p>
-    <p>Васиьевский остров 16</p>
+    <h2>Наш адрес:</h2>
+      <p>199397</p>
+      <p>Санкт-Петербург</p>
+      <p>Наличная улица,  дом 46, корпус 2</p>
+    
+    
 </template>
 <script>
 export default {
@@ -23,5 +26,13 @@ export default {
 
 </script>
 <style scoped>
+h2 {
+  font-size: 18px;
+  margin-left: 60px;
+  margin-top: 30px;
+}
+p {
+  margin-left: 60px;
+}
 
 </style>
